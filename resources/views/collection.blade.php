@@ -90,14 +90,19 @@
 
 @section('csslink')
     <link href="{{ asset('styles/collection.css') }}" rel="stylesheet">
+    <script src="{{ asset('scripts/collection.js') }}"></script>
 @endsection
 
 @section('pagelinks')
     <span class="link"> <a href="http://localhost/Laravel1/public/main" target="_blank" rel="noopener noreferrer"> Mani</a></span>
     <span class="link"> <a href="http://localhost/Laravel1/public/about" target="_blank" rel="noopener noreferrer">About</a></span>
+    
 @endsection
 
 @section('content')
+<div class="test">
+
+</div>
 <div class="search">
         <span class="capture">Collection</span>
         <input style="background-image: url('../public/img/Untitled.png'); "type="text" placeholder="Search">
@@ -108,25 +113,32 @@
             <i class="fas fa-sliders-h"></i>
         </div>
         <div class="filters">
-            <div class="gender type">
+            <form action="" method="get" style="">
+                <input id="genderFilter" type="text" name="gender" value=""/>
+                <input id="sportsFilter" type="text" name="sports" value="" />
+                <input id="priceFilter" type="text" name="price" value="" />
+                <input id="filtersForm" type="submit">
+            </form>
+            <div class="gender type" id="gender">
                 <span class="typename">Gender</span>
                 <span class="filter">Women</span>
                 <span class="filter">Men</span>
                 <span class="filter">Kids</span>
             </div>
-            <div class="sports type">
+            <div class="sports type" id="sports">
                 <span class="typename">Sports</span>
                 <span class="filter">Soccer</span>
                 <span class="filter">Basketball</span>
                 <span class="filter">Running</span>
                 <span class="filter">Lifestyle</span>
             </div>
-            <div class="price type">
+            <div class="price type" id="price">
                 <span class="typename">Price</span>
                 <span class="filter">$20 - $50</span>
                 <span class="filter">$50 - $80</span>
                 <span class="filter">$80 - $100</span>
             </div>
+            <div id="FiltersSubmit">Apply</div>
         </div>
         <div class="boots">
 

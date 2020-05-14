@@ -22,4 +22,8 @@ Route::get('/about', function () {
 Route::get('/main', function () {
     return view('landing');
 });
-Route::get('/collection','FirstController@getItems');
+// Route::get('/collection/{filters?}',function() {
+//     print_r($_GET);
+// });
+// Route::get('/collection','FirstController@getItems');
+Route::get('/collection','Collection@getItems');
