@@ -115,8 +115,6 @@
         <div class="filters">
             <form action="" method="get" style="">
                 <input id="genderFilter" type="text" name="gender" value=""/>
-                <input id="sportsFilter" type="text" name="sports" value="" />
-                <input id="priceFilter" type="text" name="price" value="" />
                 <input id="filtersForm" type="submit">
             </form>
             <div class="gender type" id="gender">
@@ -132,13 +130,13 @@
                 <span class="filter">Running</span>
                 <span class="filter">Lifestyle</span>
             </div>
-            <div class="price type" id="price">
+            <div class="price type" id="price" style="display:none;">
                 <span class="typename">Price</span>
                 <span class="filter">$20 - $50</span>
                 <span class="filter">$50 - $80</span>
                 <span class="filter">$80 - $100</span>
             </div>
-            <div id="FiltersSubmit">Apply</div>
+            <div style="display:none;" id="FiltersSubmit">Apply</div>
         </div>
         <div class="boots">
 

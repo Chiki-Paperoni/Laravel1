@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Category;
 use App\Item;
 use App\FirstModel;
@@ -13,8 +14,13 @@ class Collection extends Controller
 
         $filter = $request->input('gender');
        
+        $c = 0;
+        if ($filter) {
+            $c = Category::find($filter)->items;
+        } else {
+            $c = DB::table('items')->get();
+        }
         
-        $c = Category::find($filter)->items;
         
  
 

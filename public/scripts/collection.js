@@ -16,25 +16,25 @@ window.onload = function() {
     document.querySelectorAll("#gender .filter").forEach(function(e) {
         e.addEventListener("click",function(){
             genderFilter.value = (assosiations[this.innerText]);
-            filters.click();
+            document.getElementById("FiltersSubmit").click()
         })
     })
     document.querySelectorAll("#sports .filter").forEach(function(e) {
         e.addEventListener("click",function(){
             genderFilter.value = (assosiations[this.innerText]);
-            filters.click();
+            document.getElementById("FiltersSubmit").click()
         })
     })
-    document.querySelectorAll("#price .filter").forEach(function(e) {
-        e.addEventListener("click",function(){
-            if (this.style.color == "red") {
-                this.style.color = "black";
-                var cut = this.innerText + ",";
-                priceFilter.value = priceFilter.value.replace(cut,"")
-            } else {
-                this.style.color = "red";
-                priceFilter.value += (this.innerText + ",");
-            }
-        })
-    })
+    // document.querySelectorAll("#price .filter").forEach(function(e) {
+    //     e.addEventListener("click",function(){
+    //         if (this.style.color == "red") {
+    //             this.style.color = "black";
+    //             var cut = this.innerText + ",";
+    //             priceFilter.value = priceFilter.value.replace(cut,"")
+    //         } else {
+    //             this.style.color = "red";
+    //             priceFilter.value += (this.innerText + ",");
+    //         }
+    //     })
+    // })
 }
